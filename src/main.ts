@@ -45,6 +45,7 @@ async function bootstrap() {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'.split(','),
     origin: '*',
   });
+  setupSwagger(app);
 
   await app.listen(config.server.port);
 }

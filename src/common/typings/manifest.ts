@@ -1,4 +1,5 @@
 import { BlockDefProperties } from '@inf-monkeys/vines';
+import { Method } from 'axios';
 
 export enum AuthType {
   none = 'none',
@@ -16,9 +17,11 @@ export enum SchemaVersion {
 export enum CredentialAuthType {
   AKSK = 'AKSK',
   OAUTH2 = 'OAUTH2',
+  QRCODE = 'QRCODE',
 }
 
 export interface CredentialDefinition {
+  trigger?: boolean;
   name: string;
   displayName: string;
   properties: BlockDefProperties[];
@@ -26,10 +29,31 @@ export interface CredentialDefinition {
   type: CredentialAuthType;
 }
 
+export interface TriggerDefinition {
+  description: string;
+  displayName: string;
+  properties: BlockDefProperties[];
+  icon: string;
+  type: string;
+  workflowInputs: BlockDefProperties[];
+}
+
 export interface AuthConfig {
   type: AuthType;
   authorization_type?: 'bearer';
   verification_tokens?: { [x: string]: string };
+}
+
+export enum TriggerEndpointType {
+  create = 'create',
+  update = 'update',
+  delete = 'delete',
+}
+
+export interface TriggerEndpointConfig {
+  type: TriggerEndpointType;
+  url: string;
+  method: Method;
 }
 
 export interface ManifestJson {
@@ -42,6 +66,8 @@ export interface ManifestJson {
     url: string;
   };
   contact_email: string;
+  triggerEndpoints?: TriggerEndpointConfig[];
+  triggers?: TriggerDefinition[];
   credentials?: CredentialDefinition[];
   credentialEncryptKey?: string;
 }
