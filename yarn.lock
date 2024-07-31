@@ -413,19 +413,17 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.2.tgz#d9fae00a2d5cb40f92cfe64b47ad749fbc38f917"
   integrity sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==
 
-"@inf-monkeys/vines@^0.0.65":
-  version "0.0.65"
-  resolved "https://registry.yarnpkg.com/@inf-monkeys/vines/-/vines-0.0.65.tgz#71187de8b979d1ce7ce661a515588098d4cc48f3"
-  integrity sha512-ADaxeHyJe+62rMBNkDh3TXRIDLuouSnDhPDXxU0s2xyAxfB8JxNsDMG+jVFUmhPaLvxxNQUEH75C75Mp01sIgg==
+"@inf-monkeys/monkeys@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@inf-monkeys/monkeys/-/monkeys-0.0.5.tgz#1107034c33790ffc36daf56f79cc1009e1e9546f"
+  integrity sha512-ZqEIJbVU9cNyUKfIdQUTcM3fV8tWO6x5RFkYa+91BwWAtb+xLcyrCzyfkhzE+VZfPaDGzuIrEgtoWIbhfsQr8A==
   dependencies:
-    "@io-orkes/conductor-javascript" "^2.0.0"
-    "@types/axios" "^0.14.0"
-    axios "^1.4.0"
+    "@io-orkes/conductor-javascript" "^2.1.0"
 
-"@io-orkes/conductor-javascript@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@io-orkes/conductor-javascript/-/conductor-javascript-2.0.0.tgz#dfce174a04f582feb51af37b9697f759a11458ee"
-  integrity sha512-JUCA3yepoCxrcLMB69SICoYzBxufhFoxVkA/URH9Q8K5P56xGCbeTjv7huNaEbsfYgL0S5HpV0YPowWQ9WHNLA==
+"@io-orkes/conductor-javascript@^2.1.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@io-orkes/conductor-javascript/-/conductor-javascript-2.1.1.tgz#4a3a3eba1a6d829a567e82684cfbc3d045f0a8af"
+  integrity sha512-yBYbXlDzJ0bXpFZ5CBUzwtwMRaf1ebS4/7Mnu42uW8SUz4DBsJ0cHgCvLe/oh8I5K4JV6RofPVsiHIPjcUBoog==
 
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
@@ -1528,10 +1526,10 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-axios@*, axios@^1.4.0:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@*:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
+  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"

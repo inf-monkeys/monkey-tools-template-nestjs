@@ -28,6 +28,45 @@ export class ExampleController {
   @MonkeyToolName('add-tow-number')
   @MonkeyToolCategories(['math'])
   @MonkeyToolIcon('emoji:👧:#ceefc5')
+  @MonkeyToolDisplayName({
+    'zh-CN': '两个数字数字相机',
+    'en-US': 'Add Two Numbers',
+  })
+  @MonkeyToolDescription({
+    'zh-CN': '简单的两个数字相加',
+    'en-US': 'Simply add tow numbers.',
+  })
+  @MonkeyToolInput([
+    {
+      name: 'numA',
+      displayName: {
+        'zh-CN': '数字 A',
+        'en-US': 'Number A',
+      },
+      required: true,
+      type: 'number',
+    },
+    {
+      name: 'numB',
+      displayName: {
+        'zh-CN': '数字 B',
+        'en-US': 'Number B',
+      },
+      required: true,
+      type: 'number',
+    },
+  ])
+  @MonkeyToolOutput([
+    {
+      name: 'result',
+      displayName: {
+        'zh-CN': '结果',
+        'en-US': 'Result',
+      },
+      required: true,
+      type: 'number',
+    },
+  ])
   public async addTwoNumber(
     @Req() req: IRequest,
     @Body() body: AddTwoNumberDto,
@@ -45,19 +84,31 @@ export class ExampleController {
   })
   @MonkeyToolName('nth-power-of')
   @MonkeyToolCategories(['math'])
-  @MonkeyToolDisplayName('Calc Nth Power')
-  @MonkeyToolDescription('Calc Nth Power, assumes may take a while ...')
+  @MonkeyToolDisplayName({
+    'zh-CN': 'N次方',
+    'en-US': 'Nth Power',
+  })
+  @MonkeyToolDescription({
+    'zh-CN': '计算N次方，可能需要一段时间...',
+    'en-US': 'Calc Nth Power, assumes may take a while ...',
+  })
   @MonkeyToolIcon('emoji:👧:#ceefc5')
   @MonkeyToolInput([
     {
       name: 'num',
-      displayName: 'Number',
+      displayName: {
+        'zh-CN': '数字',
+        'en-US': 'Number',
+      },
       required: true,
       type: 'number',
     },
     {
       name: 'n',
-      displayName: 'N',
+      displayName: {
+        'zh-CN': 'N次方',
+        'en-US': 'N',
+      },
       required: true,
       type: 'number',
     },
@@ -65,7 +116,10 @@ export class ExampleController {
   @MonkeyToolOutput([
     {
       name: 'result',
-      displayName: 'Result',
+      displayName: {
+        'zh-CN': '结果',
+        'en-US': 'Result',
+      },
       required: true,
       type: 'number',
     },

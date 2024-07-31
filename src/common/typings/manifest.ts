@@ -1,4 +1,4 @@
-import { BlockDefProperties } from '@inf-monkeys/vines';
+import { ToolProperty } from '@inf-monkeys/monkeys';
 import { Method } from 'axios';
 
 export enum AuthType {
@@ -24,7 +24,7 @@ export interface CredentialDefinition {
   trigger?: boolean;
   name: string;
   displayName: string;
-  properties: BlockDefProperties[];
+  properties: ToolProperty[];
   logo: string;
   type: CredentialAuthType;
 }
@@ -32,10 +32,10 @@ export interface CredentialDefinition {
 export interface TriggerDefinition {
   description: string;
   displayName: string;
-  properties: BlockDefProperties[];
+  properties: ToolProperty[];
   icon: string;
   type: string;
-  workflowInputs: BlockDefProperties[];
+  workflowInputs: ToolProperty[];
 }
 
 export interface AuthConfig {

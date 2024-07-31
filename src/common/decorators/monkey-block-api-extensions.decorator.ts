@@ -1,8 +1,9 @@
 import {
-  BlockCredentialItem,
-  BlockDefProperties,
-  BlockExtraInfo,
-} from '@inf-monkeys/vines';
+  I18nValue,
+  ToolCredentialItem,
+  ToolExtraInfo,
+  ToolProperty,
+} from '@inf-monkeys/monkeys';
 import { ApiExtension } from '@nestjs/swagger';
 
 export function MonkeyToolName(name: string): MethodDecorator {
@@ -15,7 +16,9 @@ export function MonkeyToolName(name: string): MethodDecorator {
   };
 }
 
-export function MonkeyToolDisplayName(displayName: string): MethodDecorator {
+export function MonkeyToolDisplayName(
+  displayName: string | I18nValue,
+): MethodDecorator {
   return (
     target: any,
     key?: string | symbol,
@@ -29,7 +32,9 @@ export function MonkeyToolDisplayName(displayName: string): MethodDecorator {
   };
 }
 
-export function MonkeyToolDescription(description: string): MethodDecorator {
+export function MonkeyToolDescription(
+  description: string | I18nValue,
+): MethodDecorator {
   return (
     target: any,
     key?: string | symbol,
@@ -67,7 +72,7 @@ export function MonkeyToolCategories(categories: string[]): MethodDecorator {
   };
 }
 
-export function MonkeyToolInput(input: BlockDefProperties[]): MethodDecorator {
+export function MonkeyToolInput(input: ToolProperty[]): MethodDecorator {
   return (
     target: any,
     key?: string | symbol,
@@ -77,9 +82,7 @@ export function MonkeyToolInput(input: BlockDefProperties[]): MethodDecorator {
   };
 }
 
-export function MonkeyToolOutput(
-  output: BlockDefProperties[],
-): MethodDecorator {
+export function MonkeyToolOutput(output: ToolProperty[]): MethodDecorator {
   return (
     target: any,
     key?: string | symbol,
@@ -89,7 +92,7 @@ export function MonkeyToolOutput(
   };
 }
 
-export function MonkeyToolExtra(extra: BlockExtraInfo): MethodDecorator {
+export function MonkeyToolExtra(extra: ToolExtraInfo): MethodDecorator {
   return (
     target: any,
     key?: string | symbol,
@@ -100,7 +103,7 @@ export function MonkeyToolExtra(extra: BlockExtraInfo): MethodDecorator {
 }
 
 export function MonkeyToolCredentials(
-  credentials: BlockCredentialItem[],
+  credentials: ToolCredentialItem[],
 ): MethodDecorator {
   return (
     target: any,
