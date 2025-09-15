@@ -8,7 +8,7 @@ export class NthPowerOfDto {
     required: true,
     example: 10,
   })
-  @Joiful.number().required()
+  @(Joiful.number().required())
   num: number;
 
   @ApiProperty({
@@ -17,6 +17,6 @@ export class NthPowerOfDto {
     required: true,
     example: 2,
   })
-  @Joiful.number().required()
+  @(Joiful.number().required())
   n: number;
 }

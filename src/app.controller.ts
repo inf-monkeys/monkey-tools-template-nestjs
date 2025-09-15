@@ -23,7 +23,7 @@ export class AppController {
   public getManifestJson(): ManifestJson {
     return {
       schema_version: SchemaVersion.v1,
-      display_name: 'ComfyUI',
+      display_name: 'Example Tool',
       namespace: 'monkeys_tool_template_for_nestjs',
       auth: config.server.auth,
       api: {

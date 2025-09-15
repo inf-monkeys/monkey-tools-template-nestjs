@@ -29,7 +29,7 @@ export class ExampleController {
   @MonkeyToolCategories(['math'])
   @MonkeyToolIcon('emoji:👧:#ceefc5')
   @MonkeyToolDisplayName({
-    'zh-CN': '两个数字数字相机',
+    'zh-CN': '两个数字数字相相加',
     'en-US': 'Add Two Numbers',
   })
   @MonkeyToolDescription({

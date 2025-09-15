@@ -8,7 +8,7 @@ export class AddTwoNumberDto {
     required: true,
     example: 1,
   })
-  @Joiful.number().required()
+  @(Joiful.number().required())
   numA: number;
 
   @ApiProperty({
@@ -17,6 +17,6 @@ export class AddTwoNumberDto {
     required: true,
     example: 2,
   })
-  @Joiful.number().required()
+  @(Joiful.number().required())
   numB: number;
 }
