@@ -23,8 +23,8 @@ export class AppController {
   public getManifestJson(): ManifestJson {
     return {
       schema_version: SchemaVersion.v1,
-      display_name: 'Example Tool',
-      namespace: 'monkeys_tool_template_for_nestjs',
+      display_name: 'CHANGEME',
+      namespace: 'monkeys_tool_CHANGEME',
       auth: config.server.auth,
       api: {
         type: ApiType.openapi,
